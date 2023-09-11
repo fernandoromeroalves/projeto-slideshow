@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
 }
@@ -9,9 +11,22 @@ header{
     flex-direction: column;
     height: 100vh;
 }
+
 .header{
     height: 50px;
-    background-color: #ff0000;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    
+}
+.logo img{
+    width: 100px;
+    cursor: pointer;
+}
+.menu{
+    cursor: pointer;
 }
 .slider{
     flex: 1;
@@ -28,5 +43,27 @@ header{
     height: inherit;
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 40px;
 
+}
+.slider--controls{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider--control{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;   
+    background-size: cover;
 }
